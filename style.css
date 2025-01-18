@@ -1,0 +1,652 @@
+/*google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'popins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+/* varaibale*/
+:root{
+    --main-color:#bc9667;
+    --second-color:#edeae3;
+    --text-color:#1b1b1b;
+    --second-color:#edeae3;
+    --beg-color:#fff;
+    /*=pox shadow=*/
+    --box-shadow:2px 2px 10px 4px rgb(14 55 54 / 15%);
+
+}
+section{
+    padding: 50px 100px;
+}
+img{
+    width: 100%;
+
+}
+body{
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top:0 ;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    transition: 0.5s linear;
+    background: var(--text-color)
+    
+
+}
+header.shadow{
+    background: var(--text-color)
+    var(--box-shadow);
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    padding: 8px 17px;
+    color: var(--beg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    background: var(--main-color);
+    border-radius:0.2rem ;
+    transition: 0.2s all linear;
+}
+.header-icon{
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+.header-icon .bx{
+    color: var(--beg-color);
+}
+.header-icon .bx:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    color: var(--beg-color);
+    font-size: 24px;
+    z-index: 10000;
+    cursor: pointer;
+    display: none;
+}
+.search-box{
+    position: absolute ;
+    top:-100%;
+    left: 50%;
+    transform: translate(-50%);
+    background: var(--beg-color);
+    width: 100%;
+}
+.search-box.active{
+    top: 110%;
+    box-shadow: var(--box-shadow);
+    transition: 0.2s all linear;
+}
+.search-box input{
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--main-color);
+}
+.search-box input::placeholder{
+   font-size: 1rem;
+   font-weight: 500;
+
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: url(bg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+.home-text h1{
+    font-size: 3.4rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.home-text p{
+    font-size: 0.938rem;
+    color: var(--beg-color);
+    margin: 0.5rem 0 1.4rem;
+}
+.btn{
+    padding:10px 40px ;
+    border-radius:0.3rem;
+    background: var(--main-color);
+    color: var(--beg-color);
+    font-weight: 500;
+}
+.btn:hover{
+    background: #8a6f4d;
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    gap: 1.5rem;
+}
+.about-img img {
+    border-radius: 0.5rem;
+}
+.about-text h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.about-text p{
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.1rem;
+}
+
+/* حاوية السلايدر */
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    position: relative; /* لتحديد مكان العناصر الداخلية */
+ }
+ 
+ /* تنسيق الصور داخل السلايدر */
+ .slider-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* لتغطية الصورة بشكل مناسب داخل الإطار */
+ }
+ 
+ /* إضافة الرسوم المتحركة للسلايدر */
+ @keyframes slide {
+    0% { transform: translateX(0); } /* في البداية الصورة الأولى */
+    100% { transform: translateX(-100%); } /* في النهاية ستتحرك الصورة خارج الشاشة */
+ }
+ 
+ /* تطبيق الأنيميشن على السلايدر */
+ .slider-container {
+    animation: slide 10s infinite; /* حركة مستمرة مدتها 10 ثواني */
+ }
+ 
+ /* يمكن تخصيص المسافة بين الصور هنا */
+ .slider-container img {
+    flex-shrink: 0.5; /* حتى لا تتقلص الصور أثناء التمرير */
+ }
+ 
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+} 
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.products-container .box{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+.products-container img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 0.5rem;
+
+}
+.products-container .box h3{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem;
+}
+.products-container .box .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.products-container .box .content span{
+    padding: 0 1rem;
+    color: var(--beg-color);
+    background: var(--main-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.products-container .box .content a{
+    padding: 0 1rem;
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    text-transform:uppercase ;
+}
+.products-container .box .content a:hover{
+    background: var(--main-color);
+    color: var(--beg-color);
+    transition: 0.2s all linear;
+}
+.customers-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.customers-container .box{
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.star .bx{
+    color: var(--main-color);
+}
+.customers-container .box p{
+    font-size: 0.938rem;
+    
+}
+.customers-container .box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+} 
+.customers-container .box img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+} 
+.customers-container .box:hover{
+    background: var(--second-color);
+    transition: 0.2s all linear;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+    gap: 1.5rem;
+    
+}
+.footer-box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer-box p{
+    font-size: 0.938rem;
+    margin-bottom: 10px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.social a .bx{
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 10px;
+    background: var(--second-color);
+    border-radius: 0.2rem;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+    color: var(--beg-color);
+}
+.footer-box h3{
+    font-weight: 600;
+    max-width: 10px;
+}
+.footer-box li a{
+    color: var(--text-color);
+    
+}
+.footer-box li a:hover{
+    color: var(--main-color);
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.contact span{
+    display: flex;
+    align-items: center;
+}
+.contact i{
+    font-size: 20px;
+    margin-right:1rem ;
+}
+.copyright{
+  padding: 20px;
+  text-align: center;
+  background: var(--second-color);  
+}
+/* CSS تم تقديمه في الرد السابق */
+@media (max-width: 1058px) {
+    header {
+        padding: 16px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 11px 4%;
+    }
+    section {
+        padding: 50px 4%;
+    }
+    .logo img {
+        width: 45px;
+    }
+    .home-text {
+        padding-top: 15px;
+    }
+    .home-text h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 4%;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    .navbar {
+        position: absolute;
+        top: -300%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--second-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .navbar.active {
+        top: 100px; /* تظهر القائمة */
+    }
+    .navbar a {
+        color: var(--text-color);
+    }
+    .navbar a:hover {
+        color: var(--beg-color);
+    }
+    .about {
+        align-items: center;
+    }
+}
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 60%;
+    font-size: 10px;
+    font-weight: bold;
+}
+.cart-details {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none; /* مخفي بشكل افتراضي */
+}
+
+.cart-item {
+    margin-bottom: 15px;
+}
+
+.cart-details p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* إظهار السلة عند النقر */
+.cart-details.show {
+    display: block;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+ }
+ /* تنسيق قسم الأسئلة المتكررة */
+.faq {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+ }
+ 
+ /* عنوان قسم الأسئلة المتكررة */
+ .faq h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+ }
+ 
+ /* تنسيق عناصر الأسئلة */
+ .faq-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ /* تأثير عند التمرير فوق العنصر */
+ .faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+ }
+ 
+ /* تنسيق العناوين داخل الأسئلة */
+ .faq-item h3 {
+    font-size: 22px;
+    color:var(--main-color);
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+ }
+ 
+ /* تنسيق النصوص داخل الأسئلة */
+ .faq-item p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+ }
+ 
+ /* استجابة للموقع في الأجهزة الصغيرة */
+ @media (max-width: 768px) {
+    .faq {
+       padding: 40px 10px;
+    }
+ 
+    .faq-item {
+       width: 90%;
+       margin: 0 auto;
+    }
+ }
+ 
+ /* تنسيق قسم الخدمات */
+.services {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+ }
+ 
+ /* عنوان قسم الخدمات */
+ .services .heading h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+ }
+ 
+ /* تنسيق حاوية الخدمات */
+ .services-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+ }
+ 
+ /* تنسيق كل صندوق خدمة */
+ .services .box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .services .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+ }
+ 
+ /* تنسيق العناوين داخل الصناديق */
+ .services .box h3 {
+    font-size: 22px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+ }
+ 
+ /* تنسيق النصوص داخل الصناديق */
+ .services .box p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+ }
+ 
+ /* تنسيق استجابة الموقع للأجهزة الصغيرة */
+ @media (max-width: 768px) {
+    .services-container {
+       flex-direction: column;
+       align-items: center;
+    }
+ 
+    .services .box {
+       width: 80%;
+       margin-bottom: 20px;
+    }
+ }
+ 
+ .login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+ }
+ 
+ .login label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+ }
+ 
+ .login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ }
+ 
+ .login button {
+    width: 100%;
+    padding: 10px;
+    background-color:var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+ 
+ .login button:hover {
+    background-color: var(--main-color);
+ }
+ 
+ .login p {
+    text-align: center;
+ }
+ 
+ .login a {
+    color: var(--main-color);
+    text-decoration: none;
+ }
+ 
+ .login a:hover {
+    text-decoration: underline;
+ }
+  

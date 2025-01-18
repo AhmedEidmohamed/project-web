@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive COffe Website</title>
+    <!-- link to css-->
+     <link rel="stylesheet" href="style.css">
+      <script src="main.js" defer></script>
+
+     <link rel="stylesheet" href="about.html">
+     <!--box icones-->
+     <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+<!--navbar -->
+<header>
+    <a href="#" class="logo">
+        <img src="logo.png" alt="">
+    </a>
+<!--menu icons -->
+<i class='bx bx-menu' id="menu-icon"></i>
+
+<!-- links -->
+ <ul class="navbar">
+   <li><a href="#home">home</a></li>
+   <li><a href="#about">about us</a></li> 
+   <li><a href="#products">products</a></li>
+   <li><a href="#customers">customers</a></li> 
+ </ul>
+<!-- icons -->
+<div class="header-icon">
+    <i class='bx bx-cart-alt' id="cart-icon" ></i>
+    <span id="cart-count">0</span> <!-- عدد العناصر في السلة -->
+    <i class='bx bx-search' id="search-icon"></i>
+    <!-- نافذة لعرض محتويات السلة -->
+<div id="cart-details" class="cart-details">
+  <!-- سيتم عرض المنتجات هنا -->
+</div>
+
+</div>
+
+
+<!-- search -->
+<div class="search-box">
+  <input type="search" name="" id="" placeholder="search Here...">
+</div>
+</header>
+<section class="home" id="home">
+  <div class="home-text">
+    <h1>start your day<br>with coffee</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit consectetur consequuntur corrupti fuga dicta est deserunt minus magnam alias autem esse, aliquam voluptatibus excepturi commodi doloribus quis rem nostrum id?</p>
+    <a href="" class="btn">Shop Now</a>
+  </div>
+  <div class="home-img">
+    <img src="main.png" alt="" class="">
+  </div>
+</section>
+<!-- about -->
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="about1.jpg" alt="" >
+  </div>
+  <div class="about-text">
+    <h2>Our Hisstory</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum beatae dolorum nobis obcaecati sed perspiciatis iure vitae quis dicta, esse minus facilis nostrum ad placeat pariatur, alias explicabo magni.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem magni eius cum repellendus est. Dignissimos eligendi accusamus mollitia rem, consequatur doloribus doloremque delectus quod consequuntur dolorem unde obcaecati! Modi, dolorum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatum aspernatur beatae enim dolorem est non doloribus ullam laborum, deleniti porro delectus sapiente? Tenetur fugiat neque ad, ipsum distinctio odio.</p>
+    <a href="#" class="btn">Learn More</a>
+  </div>
+</section>
+<!--image-slider-->
+<section class="image-slider">
+  <div class="slider-container">
+     <img src="p1.png" alt="Image 1">
+     <img src="p2.png" alt="Image 2">
+     <img src="p3.png" alt="Image 3">
+     <img src="p4.png" alt="Image 4">
+     <img src="p5.png" alt="Image 5">
+     <img src="p6.png" alt="Image 6">
+     <div class="slider-controls">
+       </div>
+  
+</section>
+
+<!-- products -->
+ <section class="products" id="products">
+  <div class="heading">
+    <h2>Our popular products</h2>
+  </div>
+<!-- products -->
+<div class="products-container">
+  <div class="box">
+    <img src="p1.png" alt="">
+    <h3>Americano pure</h3>
+    <div class="content">
+      <span>$25</span>
+      <a href="#" class="add-to-cart-btn" data-product-name="Americano pure" data-product-price="25">Add to cart</a>
+    </div>
+  </div>
+  <div class="box">
+    <img src="p2.png" alt="">
+    <h3>Americano pure</h3>
+    <div class="content">
+      <span>$25</span>
+      <a href="#" class="add-to-cart-btn" data-product-name="Americano pure" data-product-price="25">Add to cart</a>
+    </div>
+  </div>
+  <div class="box">
+    <img src="p3.png" alt="">
+    <h3>Americano pure</h3>
+    <div class="content">
+      <span>$25</span>
+      <a href="#" class="add-to-cart-btn" data-product-name="Americano pure" data-product-price="25">Add to cart</a>
+    </div>
+  </div>
+  <div class="box">
+    <img src="p4.png" alt="">
+    <h3>Americano pure</h3>
+    <div class="content">
+      <span>$25</span>
+      <a href="#" class="add-to-cart-btn" data-product-name="Americano pure" data-product-price="25">Add to cart</a>
+    </div>
+  </div>
+  <div class="box">
+    <img src="p5.png" alt="">
+    <h3>Americano pure</h3>
+    <div class="content">
+      <span>$25</span>
+      <a href="#" class="add-to-cart-btn" data-product-name="Americano pure" data-product-price="25">Add to cart</a>
+    </div>
+  </div>
+  <div class="box">
+    <img src="p6.png" alt="">
+    <h3>Americano pure</h3>
+    <div class="content">
+      <span>$25</span>
+      <a href="#" class="add-to-cart-btn" data-product-name="Americano pure" data-product-price="25">Add to cart</a>
+    </div>
+  </div>
+   </section>
+   <!--services-->
+   <section class="services" id="services">
+    <div class="heading">
+       <h2>Our Services</h2>
+    </div>
+    <div class="services-container">
+       <div class="box">
+          <h3>Delivery Service</h3>
+          <p>We offer fast and reliable delivery right to your door.</p>
+       </div>
+       <div class="box">
+          <h3>Special Offers</h3>
+          <p>Check out our limited-time discounts and promotions!</p>
+       </div>
+       <div class="box">
+          <h3>Customized Orders</h3>
+          <p>Choose your coffee blend and add toppings to your taste.</p>
+       </div>
+    </div>
+ </section>
+
+  
+<!-- products -->
+<section class="customers" id="customers">
+  <div class="heading">
+    <h2>Our customer's </h2>
+  </div>
+<!-- container -->
+<div class="customers-container">
+  <div class="box">
+    <div class="star">
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star-half'></i>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ipsum adipisci, aliquid et deleniti est.</p>
+    <h2>Ahmed Eid</h2>
+    <img src="rev1.jpg" alt="">
+  </div>
+  <div class="box">
+    <div class="star">
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star-half'></i>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ipsum adipisci, aliquid et deleniti est.</p>
+    <h2>Ahmed Eid</h2>
+    <img src="rev2.jpg" alt="">
+  </div>
+  <div class="box">
+    <div class="star">
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star'></i>
+      <i class='bx bxs-star-half'></i>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ipsum adipisci, aliquid et deleniti est.</p>
+    <h2>Mary </h2>
+    <img src="rev3.jpg" alt="">
+  </div>
+</div>
+</section>
+<!--faq-->
+<section class="faq" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+     <h3>What is the delivery time?</h3>
+     <p>Our delivery time is usually between 30-45 minutes depending on your location.</p>
+  </div>
+  <div class="faq-item">
+     <h3>Do you offer vegan options?</h3>
+     <p>Yes, we have several vegan coffee options available!</p>
+  </div>
+</section>
+
+<!--log in-->
+<section class="login">
+  <h2>Login</h2>
+  <form action="login.php" method="POST">
+     <label for="username">Username</label>
+     <input type="text" id="username" name="username" required>
+     <label for="password">Password</label>
+     <input type="password" id="password" name="password" required>
+     <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="register.html">Register here</a></p>
+</section>
+<section class="footer">
+  <div class="footer-box">
+    <h2>Coffe Shop</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, similique.</p>
+    <div class="social">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-tiktok'></i></a>
+    </div>
+  </div>
+  <div class="footer-box">
+    <h3>Support</h3>
+    <li><a href="#">product</a></li>
+    <li><a href="#">Help & Support</a></li>
+    <li><a href="#">Return Policy</a></li>
+    <li><a href="#">Terms Of Use</a></li>
+    </div>
+  <div class="footer-box">
+    <h2>View Guides</h2>
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Careers </a></li>
+    <li><a href="#">Blog Posts</a></li>
+    <li><a href="#">Our Branches</a></li>
+    </div>
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <div class="contact">
+        <span><i class='bx bxs-map' ></i>250 New York City , USA 1001</span>
+        <span><i class='bx bxs-phone' ></i>+1 444 744 8444</span>
+        <span><i class='bx bxs-envelope' ></i>coffee@shop.com</span>
+      </div>
+    </div>
+</section>
+<!---copyright-->
+<div class="copyright">
+  <p>&#169; carpoolvenom all Right Reserved</p>
+</div>
+</body>
+</html>
